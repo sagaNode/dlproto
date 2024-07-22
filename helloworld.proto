@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package trpc.dlgo.helloworld;
+option go_package="github.com/sagaNode/dlgo/helloworld/pb";
+
+service HelloService {
+  rpc Hello (HelloRequest) returns (HelloReply) {}
+}
+
+message HelloRequest {
+  string msg = 1;
+}
+
+message HelloReply {
+  string msg = 1;
+}
